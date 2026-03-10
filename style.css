@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@500;600;700;800&family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap');
 
 :root {
   /* Primary Colors */
@@ -6,19 +6,24 @@
   --color-blue-100: #BBDEFB;
   --color-blue-500: #1E7FDC;
   --color-blue-700: #1565C0;
-  --color-blue-900: #001E38;
+  --color-blue-900: #12335C;
+  /* Dark Blue from ref */
 
   --color-red-50: #FFEBEE;
-  --color-red-500: #D32F2F;
+  --color-red-500: #EF3625;
+  /* Primary Red from ref */
   --color-red-700: #C62828;
 
   /* Neutrals */
   --color-white: #FFFFFF;
-  --color-gray-50: #F9FAFB;
+  --color-gray-50: #F5F5F5;
+  /* Light Gray background from ref */
   --color-gray-100: #F3F4F6;
   --color-gray-300: #D1D5DB;
-  --color-gray-600: #4B5563;
-  --color-gray-900: #111827;
+  --color-gray-600: #707070;
+  /* Body text gray from ref */
+  --color-gray-900: #0E111A;
+  /* Heading black from ref */
 
   /* Spacing Scale (8px base) */
   --space-1: 8px;
@@ -34,8 +39,9 @@
   --space-20: 160px;
 
   /* Typography */
-  --font-heading: 'Montserrat', 'Inter', -apple-system, sans-serif;
-  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-heading: 'Georama', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-btn: 'Inter', sans-serif;
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -104,7 +110,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  color: var(--color-blue-900);
+  color: var(--color-gray-900);
   font-weight: 700;
   margin-bottom: var(--space-2);
 }
@@ -185,6 +191,22 @@ p {
 .section {
   padding: var(--space-12) 0;
   /* 96px desktop vertical */
+}
+
+.bg-light {
+  background-color: var(--color-gray-50);
+}
+
+.bg-navy {
+  background-color: var(--color-blue-900);
+  color: var(--color-white);
+}
+
+.bg-navy h2,
+.bg-navy h3,
+.bg-navy h4,
+.bg-navy .eyebrow {
+  color: var(--color-white);
 }
 
 @media (max-width: 767px) {
@@ -281,7 +303,7 @@ p {
   padding: 16px 32px;
   /* --space-2 --space-4 */
   border-radius: var(--radius-sm);
-  font-family: var(--font-body);
+  font-family: var(--font-btn);
   font-weight: 600;
   font-size: 18px;
   text-align: center;
@@ -314,9 +336,9 @@ p {
 }
 
 .btn-secondary {
-  background-color: var(--color-white);
-  color: var(--color-blue-500);
-  border: 2px solid var(--color-blue-500);
+  background-color: var(--color-blue-900);
+  color: var(--color-white);
+  border: none;
 }
 
 .btn-secondary:hover {
@@ -374,6 +396,8 @@ p {
   display: flex;
   align-items: center;
   gap: 40px;
+  margin-left: var(--space-8);
+  /* Forces menu items away from the logo */
 }
 
 .nav-links a {
