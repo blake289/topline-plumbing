@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+import glob
+import re
+import os
 
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+new_fonts = """    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+"""
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Topline Plumbing | Redding, CA</title>
-    <meta name="description"
-        content="Meet Joe and Cindy Torculas. Topline Plumbing is a family-owned plumbing business in Redding, CA. Over 15 years of experience." />
-</head>
-
-<body>
-        <!-- Desktop Nav -->
+new_header = """    <!-- Desktop Nav -->
     <header class="navbar">
       <div class="container nav-container">
         <a href="/" class="logo">
@@ -40,47 +33,9 @@
         <a href="/contact.html">Contact</a>
         <a href="tel:5307689446" class="btn nav-cta" style="margin-top: 24px;">Book Free Inspection</a>
       </div>
-    </div>
+    </div>"""
 
-    <section class="section container">
-        <h1 class="text-center" style="margin-bottom: 2rem;">You're Not Calling a Corporation — You're Calling Neighbors
-        </h1>
-        <div class="grid grid-2" style="align-items: center;">
-            <img src="/images/joe-cindy.png" alt="Joe and Cindy Torculas"
-                style="border-radius: var(--border-radius); box-shadow: var(--box-shadow);" />
-            <div>
-                <p>At Topline Plumbing, we believe plumbing service should be personal, honest, and done right. That's
-                    why we've built a family business focused on trust, quality, and community.</p>
-                <h2 class="my-2">How It Started</h2>
-                <p>At the heart of Topline Plumbing is <strong>Joe Torculas</strong>, a dedicated plumber with over 15
-                    years of hands-on experience. Originally from Castroville, CA, Joe studied at Universal Technical
-                    Institute.</p>
-                <p>When Joe moved to Redding with his wife <strong>Cindy</strong>, they saw an opportunity to build
-                    something meaningful. In <strong>2007</strong>, they founded Topline Plumbing.</p>
-                <h2 class="my-2">Our Values</h2>
-                <ul style="list-style-type: none; padding:0;">
-                    <li style="margin-bottom: 1rem;"><strong>1. Honesty Over Upselling:</strong> We won't recommend a
-                        replacement if a repair will do.</li>
-                    <li style="margin-bottom: 1rem;"><strong>2. Punctuality & Respect:</strong> We show up when we say
-                        we will.</li>
-                    <li style="margin-bottom: 1rem;"><strong>3. Quality Workmanship:</strong> We don't cut corners.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-navy text-center">
-        <div class="container" style="max-width: 800px;">
-            <h2 class="text-white">The Topline Promise</h2>
-            <p style="color:rgba(255,255,255,0.8); font-size:1.25rem;">✓ A real person answers 24/7 <br>✓ Upfront
-                pricing <br>✓ Licensed, bonded, and insured</p>
-            <div class="hero-btns" style="margin-top: 2rem;">
-                <a href="/contact.html" class="btn btn-primary">Schedule Service &rarr;</a>
-            </div>
-        </div>
-    </section>
-
-        <!-- Global Footer -->
+new_footer = """    <!-- Global Footer -->
     <footer class="site-footer">
       <div class="container grid grid-4 animate-on-scroll">
         <!-- Col 1 -->
@@ -125,8 +80,34 @@
         <p><a href="/contact.html" style="display:inline; margin-left: 10px;">Privacy Policy</a> | <a href="/contact.html" style="display:inline; margin-left: 10px;">Terms of Service</a></p>
       </div>
     </footer>
+"""
 
-    <script type="module" src="/main.js"></script>
-</body>
+header_pattern = re.compile(r'<header class="site-header">.*?</header>', re.DOTALL)
+footer_pattern = re.compile(r'<footer class="site-footer">.*?</footer>', re.DOTALL)
 
-</html>
+for file in glob.glob('*.html'):
+    if file == 'index.html': continue
+    with open(file, 'r') as f:
+        content = f.read()
+
+    # Apply Header Replacement
+    content = header_pattern.sub(new_header, content)
+    
+    # Apply Footer Replacement
+    content = footer_pattern.sub(new_footer, content)
+
+    # Inject Fonts and styling padding fix for subpages right below header
+    if '<link rel="preconnect" href="https://fonts.googleapis.com">' not in content:
+        content = content.replace('<head>', '<head>\n' + new_fonts)
+        
+    # Adding padding under fixed header so content doesn't get covered
+    content = content.replace('<section class="hero"', '<section class="hero-section" style="padding-top: 100px;"')
+    
+    # Ensuring JS is still correctly loaded right before closing body
+    if 'src="/main.js"' not in content:
+        content = content.replace('</body>', '    <script type="module" src="/main.js"></script>\n  </body>')
+
+    with open(file, 'w') as f:
+        f.write(content)
+        
+print("Updated subpages successfully!")
