@@ -44,7 +44,7 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="/" class="logo">
-        <img class="nav-logo" src="/images/logo.png" alt="Topline Plumbing Logo" style="max-height: 50px;" />
+        <img class="nav-logo" src="./images/logo.png" alt="Topline Plumbing Logo" style="max-height: 50px;" />
       </a>
       <nav class="nav-links">
         <div class="dropdown">
@@ -73,7 +73,7 @@
       <!-- Ref site has a red button on the far right of nav -->
       <a href="tel:5307689446" class="btn btn-primary"
         style="padding: 12px 24px; border-radius: 30px; display: none; margin-left: auto;">
-        <span style="margin-right: 8px;">📞</span> (530) 768-9446
+        📞 530-768-9446
       </a>
       <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
     </div>
@@ -109,13 +109,13 @@
       </div>
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact Us</a>
-      <a href="tel:5307689446" class="btn btn-primary" style="margin-top: 24px; width: 100%;">Call (530) 768-9446</a>
+      <a href="tel:5307689446" class="btn btn-primary" style="margin-top: 24px; width: 100%;">📞 530-768-9446</a>
     </div>
   </div>
 
   <!-- Hero Section -->
   <section class="hero-section"
-    style="position: relative; padding: 180px 0 120px; background-image: url('/images/truck.png'); background-size: cover; background-position: center; min-height: 80vh; display: flex; align-items: center; justify-content: center;">
+    style="position: relative; padding: 180px 0 120px; background-image: url('./images/water-heater.webp'); background-size: cover; background-position: center; min-height: 80vh; display: flex; align-items: center; justify-content: center;">
     <!-- Dark overlay matching ref site -->
     <div
       style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(14, 17, 26, 0.7); z-index: 1;">
@@ -126,7 +126,7 @@
 
       <!-- Winter special badge style from ref site -->
       <div class="fade-in-up"
-        style="animation-delay: 0.1s; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;">
+        style="animation-delay: 0.1s; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 16px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;">
         <span>❄️</span> $100 Off Any Invoice Over $1000
       </div>
 
@@ -136,19 +136,25 @@
       </h1>
 
       <!-- Trust elements below heading style from ref site -->
-      <div class="fade-in-up flex justify-center gap-4"
-        style="animation-delay: 0.3s; margin-bottom: var(--space-5); flex-wrap: wrap; font-size: 15px;">
-        <div class="flex items-center gap-1"><span>🔧</span> Experienced Technicians</div>
-        <div class="flex items-center gap-1"><span>🏠</span> Residential & Commercial Service</div>
-        <div class="flex items-center gap-1"><span>📞</span> 24/7 Emergency Support</div>
+      <div class="fade-in-up" style="animation-delay: 0.3s; margin-bottom: var(--space-5); width: 100%;">
+        <div class="hide-scrollbar"
+          style="display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 12px; font-size: 13px; overflow-x: auto; width: 100%; padding-bottom: 8px; -webkit-overflow-scrolling: touch;">
+          <div style="display: flex; align-items: center; white-space: nowrap; flex-shrink: 0;"><span
+              style="font-size: 20px; margin-right: 4px;">🔧</span> Experienced Technicians</div>
+          <div style="display: flex; align-items: center; white-space: nowrap; flex-shrink: 0;"><span
+              style="font-size: 20px; margin-right: 4px;">🏠</span> Residential & Commercial Service</div>
+          <div style="display: flex; align-items: center; white-space: nowrap; flex-shrink: 0;"><span
+              style="font-size: 20px; margin-right: 4px;">📞</span> 24/7 Emergency Support</div>
+        </div>
       </div>
 
       <!-- Two buttons layout from ref site -->
       <div class="hero-btns flex justify-center gap-3 fade-in-up" style="animation-delay: 0.4s; flex-wrap: wrap;">
-        <a href="/contact.html" class="btn btn-primary" style="border-radius: 30px; font-size: 16px;">Request Estimate
+        <a href="/contact.html" class="btn btn-primary"
+          style="border-radius: 30px; font-size: 18px; padding: 16px 32px;">Request Estimate
           &rarr;</a>
-        <a href="tel:5307689446" class="btn btn-secondary" style="border-radius: 30px; font-size: 16px;">Contact
-          Topline</a>
+        <a href="tel:5307689446" class="btn btn-secondary"
+          style="border-radius: 30px; font-size: 18px; padding: 16px 32px;">Call Us</a>
       </div>
     </div>
 
@@ -173,7 +179,7 @@
         <div
           style="position: absolute; top: 16px; left: -16px; width: 100%; height: 100%; background-color: var(--color-red-500); border-radius: var(--radius-md); z-index: 1;">
         </div>
-        <img src="/images/truck.png" alt="Topline Plumbing Vans"
+        <img src="./images/truck.png" alt="Topline Plumbing Vans"
           style="position: relative; z-index: 2; width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: var(--radius-md);" />
       </div>
 
@@ -345,7 +351,7 @@
       <div class="animate-on-scroll grid grid-2" style="gap: var(--space-4);">
         <div
           style="background: var(--color-white); padding: var(--space-4); border-radius: var(--radius-sm); border: 1px solid var(--color-gray-100); text-align: center; box-shadow: var(--shadow-sm);">
-          <div class="stat-num" data-target="30"
+          <div class="stat-num animate-on-scroll" data-target="30"
             style="font-size: 64px; font-weight: 800; color: var(--color-blue-900); font-family: var(--font-heading); line-height: 1; margin-bottom: 8px;">
             0</div>
           <div style="font-size: 15px; font-weight: 600; color: var(--color-gray-600); text-transform: uppercase;">Years
@@ -354,7 +360,7 @@
 
         <div
           style="background: var(--color-white); padding: var(--space-4); border-radius: var(--radius-sm); border: 1px solid var(--color-gray-100); text-align: center; box-shadow: var(--shadow-sm);">
-          <div class="stat-num" data-target="2487"
+          <div class="stat-num animate-on-scroll" data-target="2487"
             style="font-size: 64px; font-weight: 800; color: var(--color-blue-900); font-family: var(--font-heading); line-height: 1; margin-bottom: 8px;">
             0</div>
           <div style="font-size: 15px; font-weight: 600; color: var(--color-gray-600); text-transform: uppercase;">Water
@@ -363,7 +369,7 @@
 
         <div
           style="background: var(--color-white); padding: var(--space-4); border-radius: var(--radius-sm); border: 1px solid var(--color-gray-100); text-align: center; box-shadow: var(--shadow-sm); grid-column: span 2;">
-          <div class="stat-num" data-target="5"
+          <div class="stat-num animate-on-scroll" data-target="5"
             style="font-size: 64px; font-weight: 800; color: var(--color-red-500); font-family: var(--font-heading); line-height: 1; margin-bottom: 8px;">
             0</div>
           <div style="font-size: 15px; font-weight: 600; color: var(--color-gray-600); text-transform: uppercase;">Min.
@@ -466,7 +472,7 @@
           Quote &rarr;</a>
         <a href="tel:5307689446"
           style="color: white; font-size: 15px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Or
-          call (530) 768-9446</a>
+          call 📞 530-768-9446</a>
       </div>
     </div>
   </section>
@@ -477,8 +483,8 @@
 
       <!-- Col 1 -->
       <div>
-        <img src="/images/logo.png" alt="Topline Plumbing"
-          style="width: 160px; margin-bottom: 16px; background:white; border-radius:4px; padding:4px;" />
+        <img src="./images/logo-wide.png" alt="Topline Plumbing"
+          style="width: 160px; margin-bottom: 16px; border-radius:4px; padding:4px;" />
         <p style="font-size: 16px; color: var(--color-gray-300); margin-bottom: 24px;">Auburn & Grass Valley's most
           trusted plumber since 1998.</p>
         <div class="social-icons">
@@ -520,8 +526,8 @@
       <!-- Col 4 -->
       <div>
         <h4>Contact Us</h4>
-        <a href="tel:5307689446" style="font-size: 18px; font-weight: 600; color: var(--color-white);">(530)
-          768-9446</a>
+        <a href="tel:5307689446" style="font-size: 18px; font-weight: 600; color: var(--color-white);">📞
+          530-768-9446</a>
         <a href="mailto:Toplineplumbingredding@gmail.com">Toplineplumbingredding@gmail.com</a>
         <p>Serving Redding & surrounding areas</p>
       </div>

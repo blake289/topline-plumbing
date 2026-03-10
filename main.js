@@ -47,20 +47,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Counter Animation Function
     function animateCounter(el) {
-        const target = parseInt(el.getAttribute('data-target'), 10);
-        const duration = 1500; // ms
-        const stepTime = Math.abs(Math.floor(duration / target));
-        let current = 0;
+        const targetStr = el.getAttribute('data-target').replace(/,/g, '');
+        const target = parseInt(targetStr, 10);
+
+        if (isNaN(target) || target <= 0) {
+            el.innerText = targetStr; // fallback if target is 0 or invalid
+            return;
+        }
+
+        const duration = 2000; // ms
+        const fps = 60;
+        const totalFrames = Math.round((duration / 1000) * fps);
+        let frame = 0;
 
         const timer = setInterval(() => {
-            current += Math.ceil(target / (duration / 16)); // ~60fps
-            if (current >= target) {
-                el.innerText = target + "+";
+            frame++;
+            const progress = frame / totalFrames;
+            const current = Math.round(target * progress);
+
+            if (frame >= totalFrames) {
+                el.innerText = target;
                 clearInterval(timer);
             } else {
-                el.innerText = current + "+";
+                el.innerText = current;
             }
-        }, 16);
+        }, 1000 / fps);
     }
 
     // 4. Parallax Effect on Hero
