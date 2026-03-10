@@ -11,10 +11,29 @@ new_header = """  <!-- Desktop Nav -->
   <header class="navbar">
     <div class="container nav-container">
       <a href="/" class="logo">
-        <img class="nav-logo" src="/images/logo-white.png" alt="Topline Plumbing Logo" style="max-height: 50px;" />
+        <img class="nav-logo" src="/images/logo.png" alt="Topline Plumbing Logo" style="max-height: 50px;" />
       </a>
       <nav class="nav-links">
-        <a href="/index.html#services">Services</a>
+        <div class="dropdown">
+          <a href="/index.html#services">Services ▾</a>
+          <div class="dropdown-content">
+            <a href="/emergency.html">Emergency Plumbing</a>
+            <a href="/water-heater-repair.html">Water Heaters</a>
+            <a href="/drain-cleaning.html">Drain Cleaning</a>
+            <a href="/tankless.html">Tankless Upgrades</a>
+            <a href="/repiping-services.html">Repiping Services</a>
+            <a href="/fixture-installs.html">Fixture Installs</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">Service Areas ▾</a>
+          <div class="dropdown-content">
+            <a href="/shasta-lake.html">Shasta Lake</a>
+            <a href="/anderson.html">Anderson</a>
+            <a href="/palo-cedro.html">Palo Cedro</a>
+            <a href="/bella-vista.html">Bella Vista</a>
+          </div>
+        </div>
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact Us</a>
       </nav>
@@ -37,10 +56,25 @@ new_header = """  <!-- Desktop Nav -->
 
   <!-- Mobile Drawer & Backdrop -->
   <div class="backdrop"></div>
-  <div class="mobile-drawer">
+  <div class="mobile-drawer" style="overflow-y: auto;">
     <button class="drawer-close" aria-label="Close Menu">✕</button>
     <div style="margin-top: 40px;">
-      <a href="/index.html#services">Services</a>
+      <a href="/index.html#services">Services ▾</a>
+      <div style="padding-left: 1rem; border-left: 2px solid var(--color-gray-100); margin-bottom: 1rem;">
+        <a href="/emergency.html" style="font-size: 16px; padding: 12px 0;">Emergency Plumbing</a>
+        <a href="/water-heater-repair.html" style="font-size: 16px; padding: 12px 0;">Water Heaters</a>
+        <a href="/drain-cleaning.html" style="font-size: 16px; padding: 12px 0;">Drain Cleaning</a>
+        <a href="/tankless.html" style="font-size: 16px; padding: 12px 0;">Tankless Upgrades</a>
+        <a href="/repiping-services.html" style="font-size: 16px; padding: 12px 0;">Repiping Services</a>
+        <a href="/fixture-installs.html" style="font-size: 16px; padding: 12px 0;">Fixture Installs</a>
+      </div>
+      <a href="#">Service Areas ▾</a>
+      <div style="padding-left: 1rem; border-left: 2px solid var(--color-gray-100); margin-bottom: 1rem;">
+        <a href="/shasta-lake.html" style="font-size: 16px; padding: 12px 0;">Shasta Lake</a>
+        <a href="/anderson.html" style="font-size: 16px; padding: 12px 0;">Anderson</a>
+        <a href="/palo-cedro.html" style="font-size: 16px; padding: 12px 0;">Palo Cedro</a>
+        <a href="/bella-vista.html" style="font-size: 16px; padding: 12px 0;">Bella Vista</a>
+      </div>
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact Us</a>
       <a href="tel:5307689446" class="btn btn-primary" style="margin-top: 24px; width: 100%;">Call (530) 768-9446</a>
@@ -124,6 +158,9 @@ for file in glob.glob('*.html'):
     if '<link rel="preconnect" href="https://fonts.googleapis.com">' not in content:
         content = content.replace('<head>', '<head>\n' + new_fonts)
         
+    if 'href="/style.css"' not in content:
+        content = content.replace('</head>', '    <link rel="stylesheet" href="/style.css" />\n</head>')
+
     # Adding padding under fixed header so content doesn't get covered
     content = content.replace('<section class="hero"', '<section class="hero-section" style="padding-top: 100px;"')
     

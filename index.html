@@ -44,10 +44,29 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="/" class="logo">
-        <img class="nav-logo" src="/images/logo-white.png" alt="Topline Plumbing Logo" style="max-height: 50px;" />
+        <img class="nav-logo" src="/images/logo.png" alt="Topline Plumbing Logo" style="max-height: 50px;" />
       </a>
       <nav class="nav-links">
-        <a href="/#services">Services</a>
+        <div class="dropdown">
+          <a href="/index.html#services">Services ▾</a>
+          <div class="dropdown-content">
+            <a href="/emergency.html">Emergency Plumbing</a>
+            <a href="/water-heater-repair.html">Water Heaters</a>
+            <a href="/drain-cleaning.html">Drain Cleaning</a>
+            <a href="/tankless.html">Tankless Upgrades</a>
+            <a href="/repiping-services.html">Repiping Services</a>
+            <a href="/fixture-installs.html">Fixture Installs</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">Service Areas ▾</a>
+          <div class="dropdown-content">
+            <a href="/shasta-lake.html">Shasta Lake</a>
+            <a href="/anderson.html">Anderson</a>
+            <a href="/palo-cedro.html">Palo Cedro</a>
+            <a href="/bella-vista.html">Bella Vista</a>
+          </div>
+        </div>
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact Us</a>
       </nav>
@@ -69,12 +88,27 @@
 
   <!-- Mobile Drawer & Backdrop -->
   <div class="backdrop"></div>
-  <div class="mobile-drawer">
+  <div class="mobile-drawer" style="overflow-y: auto;">
     <button class="drawer-close" aria-label="Close Menu">✕</button>
     <div style="margin-top: 40px;">
-      <a href="/#services">Services</a>
+      <a href="/index.html#services">Services ▾</a>
+      <div style="padding-left: 1rem; border-left: 2px solid var(--color-gray-100); margin-bottom: 1rem;">
+        <a href="/emergency.html" style="font-size: 16px; padding: 12px 0;">Emergency Plumbing</a>
+        <a href="/water-heater-repair.html" style="font-size: 16px; padding: 12px 0;">Water Heaters</a>
+        <a href="/drain-cleaning.html" style="font-size: 16px; padding: 12px 0;">Drain Cleaning</a>
+        <a href="/tankless.html" style="font-size: 16px; padding: 12px 0;">Tankless Upgrades</a>
+        <a href="/repiping-services.html" style="font-size: 16px; padding: 12px 0;">Repiping Services</a>
+        <a href="/fixture-installs.html" style="font-size: 16px; padding: 12px 0;">Fixture Installs</a>
+      </div>
+      <a href="#">Service Areas ▾</a>
+      <div style="padding-left: 1rem; border-left: 2px solid var(--color-gray-100); margin-bottom: 1rem;">
+        <a href="/shasta-lake.html" style="font-size: 16px; padding: 12px 0;">Shasta Lake</a>
+        <a href="/anderson.html" style="font-size: 16px; padding: 12px 0;">Anderson</a>
+        <a href="/palo-cedro.html" style="font-size: 16px; padding: 12px 0;">Palo Cedro</a>
+        <a href="/bella-vista.html" style="font-size: 16px; padding: 12px 0;">Bella Vista</a>
+      </div>
       <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/contact.html">Contact Us</a>
       <a href="tel:5307689446" class="btn btn-primary" style="margin-top: 24px; width: 100%;">Call (530) 768-9446</a>
     </div>
   </div>
@@ -235,7 +269,7 @@
           <h3 style="font-size: 24px; margin-bottom: 12px;">Repiping Services</h3>
           <p style="color: rgba(255,255,255,0.8); margin-bottom: 24px;">Upgrade old, failing galvanized or polybutylene
             pipes to reliable PEX or Copper.</p>
-          <a href="/contact.html"
+          <a href="/repiping-services.html"
             style="font-weight: 600; color: var(--color-red-500); text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Learn
             More &rarr;</a>
         </div>
@@ -246,7 +280,7 @@
           <h3 style="font-size: 24px; margin-bottom: 12px;">Fixture Installs</h3>
           <p style="color: rgba(255,255,255,0.8); margin-bottom: 24px;">Professional installation for sinks, toilets,
             faucets, showers, and garbage disposals.</p>
-          <a href="/contact.html"
+          <a href="/fixture-installs.html"
             style="font-weight: 600; color: var(--color-red-500); text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Learn
             More &rarr;</a>
         </div>
@@ -311,7 +345,7 @@
       <div class="animate-on-scroll grid grid-2" style="gap: var(--space-4);">
         <div
           style="background: var(--color-white); padding: var(--space-4); border-radius: var(--radius-sm); border: 1px solid var(--color-gray-100); text-align: center; box-shadow: var(--shadow-sm);">
-          <div class="stat-num" data-target="25"
+          <div class="stat-num" data-target="30"
             style="font-size: 64px; font-weight: 800; color: var(--color-blue-900); font-family: var(--font-heading); line-height: 1; margin-bottom: 8px;">
             0</div>
           <div style="font-size: 15px; font-weight: 600; color: var(--color-gray-600); text-transform: uppercase;">Years
@@ -320,7 +354,7 @@
 
         <div
           style="background: var(--color-white); padding: var(--space-4); border-radius: var(--radius-sm); border: 1px solid var(--color-gray-100); text-align: center; box-shadow: var(--shadow-sm);">
-          <div class="stat-num" data-target="2800"
+          <div class="stat-num" data-target="2487"
             style="font-size: 64px; font-weight: 800; color: var(--color-blue-900); font-family: var(--font-heading); line-height: 1; margin-bottom: 8px;">
             0</div>
           <div style="font-size: 15px; font-weight: 600; color: var(--color-gray-600); text-transform: uppercase;">Water
@@ -329,7 +363,7 @@
 
         <div
           style="background: var(--color-white); padding: var(--space-4); border-radius: var(--radius-sm); border: 1px solid var(--color-gray-100); text-align: center; box-shadow: var(--shadow-sm); grid-column: span 2;">
-          <div class="stat-num" data-target="30"
+          <div class="stat-num" data-target="5"
             style="font-size: 64px; font-weight: 800; color: var(--color-red-500); font-family: var(--font-heading); line-height: 1; margin-bottom: 8px;">
             0</div>
           <div style="font-size: 15px; font-weight: 600; color: var(--color-gray-600); text-transform: uppercase;">Min.
@@ -423,8 +457,8 @@
         <h2
           style="font-size: 42px; text-transform: uppercase; line-height: 1.1; margin-bottom: 16px; color: var(--color-white);">
           Ready to Fix Your Plumbing Problem?</h2>
-        <p style="font-size: 18px; opacity: 0.9; margin-bottom: 0; color: rgba(255,255,255,0.8);">Only 12 spots left
-          this week. Book your free inspection now and get <strong>$100 off</strong>.</p>
+        <p style="font-size: 18px; opacity: 0.9; margin-bottom: 0; color: rgba(255,255,255,0.8);">Book your free
+          inspection now and get <strong>$100 off</strong>.</p>
       </div>
       <div class="flex flex-col items-center justify-center gap-3">
         <a href="/contact.html" class="btn btn-primary"
