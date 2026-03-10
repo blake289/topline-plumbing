@@ -11,7 +11,7 @@ new_header = """  <!-- Desktop Nav -->
   <header class="navbar">
     <div class="container nav-container">
       <a href="/" class="logo">
-        <img class="nav-logo" src="/images/logo.png" alt="Topline Plumbing Logo" style="max-height: 50px;" />
+        <img class="nav-logo" src="/images/logo-white.png" alt="Topline Plumbing Logo" style="max-height: 50px;" />
       </a>
       <nav class="nav-links">
         <a href="/index.html#services">Services</a>
@@ -26,6 +26,10 @@ new_header = """  <!-- Desktop Nav -->
     </div>
   </header>
   <style>
+    .navbar { background-color: #041E38 !important; }
+    .nav-links a { color: rgba(255, 255, 255, 0.9) !important; letter-spacing: 0.5px; }
+    .nav-links a:hover { color: #fff !important; }
+    .mobile-menu-btn { color: #fff !important; }
     @media (min-width: 1024px) {
       .navbar .btn-primary { display: inline-flex !important; }
     }

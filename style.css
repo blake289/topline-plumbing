@@ -371,11 +371,10 @@ p {
   left: 0;
   width: 100%;
   height: 80px;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: #041E38;
+  /* Custom Dark Blue from User Image */
   z-index: 1000;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   transition: transform var(--transition-base);
@@ -401,14 +400,15 @@ p {
 }
 
 .nav-links a {
-  color: var(--color-blue-900);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
   font-size: 16px;
   font-family: var(--font-heading);
+  letter-spacing: 0.5px;
 }
 
 .nav-links a:hover {
-  color: var(--color-blue-500);
+  color: var(--color-white);
 }
 
 /* Nav CTA */
@@ -429,7 +429,7 @@ p {
 .mobile-menu-btn {
   display: none;
   font-size: 24px;
-  color: var(--color-blue-900);
+  color: var(--color-white);
   min-width: 44px;
   min-height: 44px;
 }
