@@ -1016,3 +1016,306 @@ body:has(title:contains("Contact")) .hero-section h1,
     margin-left: 48px !important;
   }
 }
+
+
+/* ==============================================
+   COMPREHENSIVE UI/UX IMPROVEMENTS
+   Mobile-First, Professional Design System
+   ============================================== */
+
+/* Safe zones - prevent content from touching edges */
+.container {
+  padding-left: max(24px, env(safe-area-inset-left));
+  padding-right: max(24px, env(safe-area-inset-right));
+}
+
+/* Section spacing - consistent vertical rhythm */
+.section {
+  padding-top: clamp(48px, 8vw, 80px);
+  padding-bottom: clamp(48px, 8vw, 80px);
+}
+
+/* Improved CTA spacing and touch targets */
+.btn {
+  min-height: 48px;
+  padding: 14px 28px;
+  margin: 8px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary,
+.btn-secondary {
+  font-size: clamp(15px, 2vw, 17px);
+  padding: 16px 32px;
+  min-width: 160px;
+}
+
+/* Hero improvements */
+.hero-section {
+  padding: clamp(80px, 12vh, 120px) 24px clamp(60px, 10vh, 100px);
+  min-height: max(500px, 60vh);
+}
+
+.hero-section h1 {
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1.2;
+  margin-bottom: 24px;
+  padding-top: 0;
+}
+
+.hero-section p {
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-btns {
+  margin-top: 32px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Card improvements - better spacing */
+.card {
+  padding: clamp(24px, 4vw, 40px);
+  margin-bottom: 24px;
+  border-radius: 12px;
+}
+
+.card h2,
+.card h3 {
+  margin-bottom: 16px;
+}
+
+.card p {
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+/* Grid improvements - responsive */
+.grid {
+  gap: clamp(24px, 4vw, 40px);
+}
+
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: clamp(24px, 4vw, 40px);
+}
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Navbar mobile improvements */
+@media (max-width: 1023px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+    margin-left: auto;
+  }
+  
+  .status-dot-container {
+    display: none !important;
+  }
+  
+  .navbar .btn-primary {
+    display: none !important;
+  }
+}
+
+/* Form improvements - better UX */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+.form-control {
+  min-height: 48px;
+  padding: 14px 16px;
+  font-size: 16px; /* Prevents zoom on iOS */
+  border-radius: 8px;
+  border: 2px solid var(--color-gray-300);
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-blue-500);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Footer improvements */
+.site-footer {
+  padding: clamp(48px, 8vw, 64px) 24px 24px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 24px;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+/* Pricing section mobile optimization */
+@media (max-width: 768px) {
+  .pricing-card {
+    padding: 32px 24px !important;
+  }
+  
+  .pricing-card h3 {
+    font-size: 18px !important;
+  }
+  
+  .pricing-card > div[style*="font-size: 64px"] {
+    font-size: 48px !important;
+  }
+}
+
+/* Service cards hover on desktop only */
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Touch-friendly spacing */
+@media (max-width: 768px) {
+  .hero-btns .btn {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* More generous tap targets */
+  a, button {
+    min-height: 44px;
+    padding: 12px;
+  }
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: clamp(16px, 3vw, 24px);
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: clamp(28px, 5vw, 42px);
+}
+
+h3 {
+  font-size: clamp(22px, 4vw, 32px);
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* Improved contrast for accessibility */
+body {
+  color: #1f2937;
+}
+
+a {
+  color: var(--color-blue-500);
+  transition: color 0.2s ease;
+}
+
+/* Better visual hierarchy */
+.eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+/* Smooth scrolling with offset for sticky nav */
+html {
+  scroll-padding-top: 100px;
+}
+
+/* Loading performance - prevent layout shift */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Professional shadows */
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Container max-width for readability */
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Prevent orphans in headings */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+/* Better button states */
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
