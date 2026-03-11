@@ -69,7 +69,11 @@
         <a href="/contact.html">Contact Us</a>
       </nav>
       <!-- Ref site has a red button on the far right of nav -->
-      <a href="tel:5307689446" class="btn btn-primary"
+              <div style="display: flex; align-items: center; gap: 8px; color: white; font-size: 14px; font-weight: 600;">
+          <span class="status-dot"></span>
+          <span>24/7 Emergency Support</span>
+        </div>
+        <a href="tel:5307689446" class="btn btn-primary"
         style="padding: 12px 24px; border-radius: 30px; display: none; margin-left: auto;">
         📞 (530) 768-9446
       </a>
@@ -149,8 +153,13 @@
           <h2 style="margin-bottom: 1.25rem; font-size: 1.5rem; color: var(--color-gray-900);">Get a Free Estimate</h2>
           <form action="#" method="POST" id="hero-estimate-form">
             <div style="margin-bottom: 1rem;">
-              <label for="heroFullName" style="display: block; margin-bottom: 0.35rem; font-weight: 600; color: var(--color-gray-700); font-size: 14px;">Full Name</label>
-              <input type="text" id="heroFullName" name="fullName" required
+              <label for="heroFirstName" style="display: block; margin-bottom: 0.35rem; font-weight: 600; color: var(--color-gray-700); font-size: 14px;">First Name</label>
+              <input type="text" id="heroFirstName" name="firstName" required
+                style="width: 100%; padding: 0.65rem 0.75rem; border: 1px solid var(--color-gray-300); border-radius: 6px; font-family: inherit; font-size: 15px;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+              <label for="heroLastName" style="display: block; margin-bottom: 0.35rem; font-weight: 600; color: var(--color-gray-700); font-size: 14px;">Last Name</label>
+              <input type="text" id="heroLastName" name="lastName" required
                 style="width: 100%; padding: 0.65rem 0.75rem; border: 1px solid var(--color-gray-300); border-radius: 6px; font-family: inherit; font-size: 15px;">
             </div>
             <div style="margin-bottom: 1rem;">

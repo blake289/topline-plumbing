@@ -11,7 +11,7 @@ new_header = """  <!-- Desktop Nav -->
   <header class="navbar">
     <div class="container nav-container">
       <a href="/" class="logo">
-        <img class="nav-logo" src="./images/logo.png" alt="Topline Plumbing Logo" style="max-height: 50px;" />
+        <img class="nav-logo" src="/images/logo-wide.svg" alt="Topline Plumbing Logo" style="max-height: 50px;" />
       </a>
       <nav class="nav-links">
         <div class="dropdown">
@@ -87,7 +87,7 @@ new_footer = """  <!-- Global Footer -->
 
       <!-- Col 1 -->
       <div>
-        <img src="./images/logo.png" alt="Topline Plumbing"
+        <img src="/images/logo-wide.svg" alt="Topline Plumbing"
           style="width: 160px; margin-bottom: 16px; border-radius:4px; padding:4px;" />
         <p style="font-size: 16px; color: var(--color-gray-300); margin-bottom: 24px;">Auburn & Grass Valley's most
           trusted plumber since 1998.</p>

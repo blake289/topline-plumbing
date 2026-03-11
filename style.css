@@ -974,3 +974,25 @@ body:has(title:contains("Contact")) .hero-section h1,
 .hero-section .hero-content h1:first-child {
   padding-top: 60px;
 }
+
+
+/* Blinking status dot animation */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
