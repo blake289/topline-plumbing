@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Georama:wght@500;600;700;800&family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Georama:wght@500;600;700;800&family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
   <!-- Schema.org JSON-LD -->
@@ -20,10 +20,10 @@
         "@context": "https://schema.org",
         "@type": "PlumbingService",
         "name": "Topline Plumbing",
-        "image": "https://toplineplumbing530.com/images/logo-wide.png",
+        "image": "https://toplineplumbing530.com/images/logo-wide.svg",
         "@id": "",
         "url": "https://toplineplumbing530.com",
-        "telephone": "530-768-9446",
+        "telephone": "(530) 768-9446",
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
@@ -43,9 +43,7 @@
   <!-- Desktop Nav -->
   <header class="navbar">
     <div class="container nav-container">
-      <a href="/" class="logo">
-        <img class="nav-logo" src="./images/logo.png" alt="Topline Plumbing Logo" style="max-height: 50px;" />
-      </a>
+      <a href="/" class="logo"><img src="/images/logo.webp" alt="Topline Plumbing" style="height: 60px; width: auto;"></a>
       <nav class="nav-links">
         <div class="dropdown">
           <a href="/index.html#services">Services ▾</a>
@@ -73,7 +71,7 @@
       <!-- Ref site has a red button on the far right of nav -->
       <a href="tel:5307689446" class="btn btn-primary"
         style="padding: 12px 24px; border-radius: 30px; display: none; margin-left: auto;">
-        📞 530-768-9446
+        📞 (530) 768-9446
       </a>
       <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
     </div>
@@ -109,52 +107,70 @@
       </div>
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact Us</a>
-      <a href="tel:5307689446" class="btn btn-primary" style="margin-top: 24px; width: 100%;">📞 530-768-9446</a>
+      <a href="tel:5307689446" class="btn btn-primary" style="margin-top: 24px; width: 100%;">📞 (530) 768-9446</a>
     </div>
   </div>
 
   <!-- Hero Section -->
   <section class="hero-section"
-    style="position: relative; padding: 180px 0 120px; background-image: url('./images/water-heater.webp'); background-size: cover; background-position: center; min-height: 80vh; display: flex; align-items: center; justify-content: center;">
-    <!-- Dark overlay matching ref site -->
+    style="position: relative; padding: 120px 0 100px; background-image: url('./images/water-heater.webp'); background-size: cover; background-position: center; min-height: 80vh; display: flex; align-items: center; justify-content: center;">
+    <!-- Dark overlay -->
     <div
       style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(14, 17, 26, 0.7); z-index: 1;">
     </div>
 
-    <div class="container text-center animate-on-scroll"
-      style="position: relative; z-index: 2; color: var(--color-white); max-width: 900px;">
-
-      <!-- Winter special badge style from ref site -->
-      <div class="fade-in-up"
-        style="animation-delay: 0.1s; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 16px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;">
-        <span>❄️</span> $100 Off Any Invoice Over $1000
-      </div>
-
-      <h1 class="fade-in-up"
-        style="animation-delay: 0.2s; margin-bottom: var(--space-3); color: var(--color-white); text-transform: uppercase; font-size: 56px; letter-spacing: 1px;">
-        Reliable Plumbing & Drain Services in Redding & Beyond
-      </h1>
-
-      <!-- Trust elements below heading style from ref site -->
-      <div class="fade-in-up" style="animation-delay: 0.3s; margin-bottom: var(--space-5); width: 100%;">
-        <div class="hide-scrollbar"
-          style="display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 12px; font-size: 13px; overflow-x: auto; width: 100%; padding-bottom: 8px; -webkit-overflow-scrolling: touch;">
-          <div style="display: flex; align-items: center; white-space: nowrap; flex-shrink: 0;"><span
-              style="font-size: 20px; margin-right: 4px;">🔧</span> Experienced Technicians</div>
-          <div style="display: flex; align-items: center; white-space: nowrap; flex-shrink: 0;"><span
-              style="font-size: 20px; margin-right: 4px;">🏠</span> Residential & Commercial Service</div>
-          <div style="display: flex; align-items: center; white-space: nowrap; flex-shrink: 0;"><span
-              style="font-size: 20px; margin-right: 4px;">📞</span> 24/7 Emergency Support</div>
+    <div class="container hero-inner animate-on-scroll" style="position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1.3fr; gap: var(--space-8); align-items: center; max-width: 1300px;">
+      <!-- Left: headline & CTAs -->
+      <div class="hero-text" style="color: var(--color-white); text-align: left;">
+        <div class="fade-in-up"
+          style="animation-delay: 0.1s; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; background: rgba(255,255,255,0.15); padding: 12px 24px; border-radius: 30px; backdrop-filter: blur(10px);">
+          <span>🔧</span> Free Estimates • Same-Day Service
+        </div>
+        <h1 class="fade-in-up"
+          style="animation-delay: 0.2s; margin-bottom: var(--space-3); color: var(--color-white); text-transform: uppercase; font-size: clamp(32px, 4vw, 48px); letter-spacing: 1px; line-height: 1.15;">
+          Reliable Plumbing & Drain Services in Redding & Beyond
+        </h1>
+        <div class="fade-in-up" style="animation-delay: 0.3s; margin-bottom: var(--space-5);">
+          <div style="display: flex; flex-wrap: nowrap; gap: 24px; font-size: 16px; max-width: 1200px;">
+            <span style="display: flex; align-items: center; gap: 4px; white-space: nowrap;">🔧 Experienced Technicians</span>
+            <span style="display: flex; align-items: center; gap: 4px; white-space: nowrap;">🏠 Residential & Commercial</span>
+            <span style="display: flex; align-items: center; gap: 4px; white-space: nowrap;">📞 24/7 Emergency Support</span>
+          </div>
+        </div>
+        <div class="hero-btns flex gap-3 fade-in-up" style="animation-delay: 0.4s; flex-wrap: wrap;">
+          <a href="tel:5307689446" class="btn btn-primary"
+            style="border-radius: 30px; font-size: 16px; padding: 14px 28px; display: inline-flex; align-items: center; gap: 8px;">📞 (530) 768-9446</a>
         </div>
       </div>
 
-      <!-- Two buttons layout from ref site -->
-      <div class="hero-btns flex justify-center gap-3 fade-in-up" style="animation-delay: 0.4s; flex-wrap: wrap;">
-        <a href="/contact.html" class="btn btn-primary"
-          style="border-radius: 30px; font-size: 18px; padding: 16px 32px;">Request Estimate
-          &rarr;</a>
-        <a href="tel:5307689446" class="btn btn-secondary"
-          style="border-radius: 30px; font-size: 18px; padding: 16px 32px;">Call Us</a>
+      <!-- Right: contact form -->
+      <div class="fade-in-up" style="animation-delay: 0.2s; width: 100%;">
+        <div style="background: var(--color-white); padding: var(--space-6); border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+          <h2 style="margin-bottom: 1.25rem; font-size: 1.5rem; color: var(--color-gray-900);">Get a Free Estimate</h2>
+          <form action="#" method="POST" id="hero-estimate-form">
+            <div style="margin-bottom: 1rem;">
+              <label for="heroFullName" style="display: block; margin-bottom: 0.35rem; font-weight: 600; color: var(--color-gray-700); font-size: 14px;">Full Name</label>
+              <input type="text" id="heroFullName" name="fullName" required
+                style="width: 100%; padding: 0.65rem 0.75rem; border: 1px solid var(--color-gray-300); border-radius: 6px; font-family: inherit; font-size: 15px;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+              <label for="heroPhone" style="display: block; margin-bottom: 0.35rem; font-weight: 600; color: var(--color-gray-700); font-size: 14px;">Phone</label>
+              <input type="tel" id="heroPhone" name="phone" required
+                style="width: 100%; padding: 0.65rem 0.75rem; border: 1px solid var(--color-gray-300); border-radius: 6px; font-family: inherit; font-size: 15px;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+              <label for="heroEmail" style="display: block; margin-bottom: 0.35rem; font-weight: 600; color: var(--color-gray-700); font-size: 14px;">Email</label>
+              <input type="email" id="heroEmail" name="email" required
+                style="width: 100%; padding: 0.65rem 0.75rem; border: 1px solid var(--color-gray-300); border-radius: 6px; font-family: inherit; font-size: 15px;">
+            </div>
+            <div style="margin-bottom: 1.25rem;">
+              <label for="heroMessage" style="display: block; margin-bottom: 0.35rem; font-weight: 600; color: var(--color-gray-700); font-size: 14px;">Message</label>
+              <textarea id="heroMessage" name="message" rows="3" placeholder="Brief description of your plumbing need..."
+                style="width: 100%; padding: 0.65rem 0.75rem; border: 1px solid var(--color-gray-300); border-radius: 6px; font-family: inherit; font-size: 15px; resize: vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.875rem; border-radius: 8px;">Request Estimate</button>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -179,7 +195,7 @@
         <div
           style="position: absolute; top: 16px; left: -16px; width: 100%; height: 100%; background-color: var(--color-red-500); border-radius: var(--radius-md); z-index: 1;">
         </div>
-        <img src="./images/truck.png" alt="Topline Plumbing Vans"
+        <img src="./images/truck.webp" alt="Topline Plumbing Vans"
           style="position: relative; z-index: 2; width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: var(--radius-md);" />
       </div>
 
@@ -241,7 +257,7 @@
           <div style="font-size: 32px; margin-bottom: 16px;">🔥</div>
           <h3 style="font-size: 24px; margin-bottom: 12px;">Water Heaters</h3>
           <p style="color: rgba(255,255,255,0.8); margin-bottom: 24px;">Expert installation, proactive repair, and
-            complete system replacement.</p>
+            complete system replacement. Service starting at $127.</p>
           <a href="/water-heater-repair.html"
             style="font-weight: 600; color: var(--color-red-500); text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Learn
             More &rarr;</a>
@@ -252,7 +268,7 @@
           <div style="font-size: 32px; margin-bottom: 16px;">🪠</div>
           <h3 style="font-size: 24px; margin-bottom: 12px;">Drain Cleaning</h3>
           <p style="color: rgba(255,255,255,0.8); margin-bottom: 24px;">We clear tough clogs and backed-up sewer lines
-            with mechanical power augers.</p>
+            with mechanical power augers. Starting at $130.</p>
           <a href="/drain-cleaning.html"
             style="font-weight: 600; color: var(--color-red-500); text-transform: uppercase; font-size: 14px; letter-spacing: 1px;">Learn
             More &rarr;</a>
@@ -299,6 +315,122 @@
         transform: translateY(-4px);
       }
     </style>
+  </section>
+
+  <!-- Pricing Section - Premium Dark -->
+  <section class="section" style="background: #0D1B2A; padding: 100px 0 120px;">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="text-center animate-on-scroll" style="margin-bottom: 80px;">
+        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 56px; text-transform: uppercase; color: white; letter-spacing: 4px; margin-bottom: 16px;">Our Services & Pricing</h2>
+        <p style="font-family: 'DM Sans', sans-serif; color: rgba(255,255,255,0.7); font-size: 18px; max-width: 650px; margin: 0 auto; line-height: 1.6;">Premium plumbing services with transparent, upfront pricing. No hidden fees, no surprises.</p>
+      </div>
+
+      <div class="grid grid-3" style="gap: 40px;">
+        <!-- Card 1: Water Heating Service -->
+        <div class="animate-on-scroll pricing-card" style="background: rgba(255,255,255,0.04); backdrop-filter: blur(10px); padding: 48px 36px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease; position: relative;">
+          <!-- Icon -->
+          <div style="margin-bottom: 24px;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E8A020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8z"/>
+              <path d="M12 18c-2.21 0-4-1.79-4-4 0-1.5 1.5-3.5 4-5.5 2.5 2 4 4 4 5.5 0 2.21-1.79 4-4 4z"/>
+            </svg>
+          </div>
+          <h3 style="font-family: 'Barlow Condensed', sans-serif; font-size: 20px; text-transform: uppercase; color: rgba(255,255,255,0.9); letter-spacing: 2px; margin-bottom: 16px; font-weight: 600;">Water Heating Service</h3>
+          <div style="font-family: 'Bebas Neue', sans-serif; font-size: 64px; font-weight: 700; color: white; margin-bottom: 20px; line-height: 1;">$127</div>
+          <p style="font-family: 'DM Sans', sans-serif; color: rgba(255,255,255,0.6); font-size: 15px; line-height: 1.7; margin-bottom: 32px;">Keep your hot water running and your home protected with routine checks and quick repairs.</p>
+          <a href="/contact.html" style="font-family: 'DM Sans', sans-serif; display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; color: white; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px;">
+            Get a Quote <span style="font-size: 16px;">→</span>
+          </a>
+        </div>
+
+        <!-- Card 2: New Installations (Featured) -->
+        <div class="animate-on-scroll pricing-card" style="background: rgba(255,255,255,0.06); backdrop-filter: blur(10px); padding: 48px 36px; border-radius: 12px; border: 1px solid rgba(232,160,32,0.3); border-top: 3px solid #E8A020; transition: all 0.3s ease; position: relative; transform: translateY(-8px);">
+          <!-- Featured Badge -->
+          <div style="position: absolute; top: 20px; right: 20px; background: #E8A020; color: #0D1B2A; padding: 4px 12px; border-radius: 4px; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Featured</div>
+          <!-- Icon -->
+          <div style="margin-bottom: 24px;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E8A020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 style="font-family: 'Barlow Condensed', sans-serif; font-size: 20px; text-transform: uppercase; color: white; letter-spacing: 2px; margin-bottom: 16px; font-weight: 600;">New Installations</h3>
+          <div style="font-family: 'Bebas Neue', sans-serif; font-size: 64px; font-weight: 700; color: #E8A020; margin-bottom: 20px; line-height: 1;">From $1,000</div>
+          <p style="font-family: 'DM Sans', sans-serif; color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.7; margin-bottom: 32px;">Upgrade your system or replace failing units with fast, high-quality work.</p>
+          <a href="/contact.html" style="font-family: 'DM Sans', sans-serif; display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #E8A020; border: 1px solid #E8A020; border-radius: 6px; color: #0D1B2A; text-decoration: none; font-size: 14px; font-weight: 700; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px;">
+            Get a Quote <span style="font-size: 16px;">→</span>
+          </a>
+        </div>
+
+        <!-- Card 3: Drain Cleaning -->
+        <div class="animate-on-scroll pricing-card" style="background: rgba(255,255,255,0.04); backdrop-filter: blur(10px); padding: 48px 36px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s ease; position: relative;">
+          <!-- Icon -->
+          <div style="margin-bottom: 24px;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E8A020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"/>
+              <path d="m19 9-5 5-4-4-3 3"/>
+              <circle cx="12" cy="12" r="1"/>
+            </svg>
+          </div>
+          <h3 style="font-family: 'Barlow Condensed', sans-serif; font-size: 20px; text-transform: uppercase; color: rgba(255,255,255,0.9); letter-spacing: 2px; margin-bottom: 16px; font-weight: 600;">Drain Cleaning</h3>
+          <div style="font-family: 'Bebas Neue', sans-serif; font-size: 64px; font-weight: 700; color: white; margin-bottom: 20px; line-height: 1;">$130</div>
+          <p style="font-family: 'DM Sans', sans-serif; color: rgba(255,255,255,0.6); font-size: 15px; line-height: 1.7; margin-bottom: 32px;">Clearing tough clogs and restoring flow with clean, efficient service.</p>
+          <a href="/contact.html" style="font-family: 'DM Sans', sans-serif; display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; color: white; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px;">
+            Get a Quote <span style="font-size: 16px;">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .pricing-card:hover {
+        background: rgba(255,255,255,0.08) !important;
+        border-color: rgba(232,160,32,0.4) !important;
+        transform: translateY(-4px);
+      }
+      .pricing-card a:hover {
+        background: rgba(255,255,255,0.1);
+        border-color: rgba(255,255,255,0.4);
+      }
+      .pricing-card:nth-child(2) a:hover {
+        background: #d99320;
+        border-color: #d99320;
+      }
+    </style>
+  </section>
+
+  <!-- Professional Work Section -->
+  <section class="section" style="background: white; padding: var(--space-8) 0;">
+    <div class="container grid grid-2 items-center" style="gap: var(--space-8);">
+      <!-- Text Column -->
+      <div class="animate-on-scroll">
+        <h2 style="font-size: 42px; text-transform: uppercase; margin-bottom: 24px;">Expert Technicians, Every Time</h2>
+        <p style="font-size: 18px; color: var(--color-gray-600); margin-bottom: 24px;">
+          Our licensed and insured technicians bring years of experience to every job. From water heater repairs to complete system installations, we deliver professional service you can trust.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 16px;">
+            <span style="color: var(--color-red-500); font-size: 20px;">✓</span>
+            <span>Licensed & Insured Professionals</span>
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 16px;">
+            <span style="color: var(--color-red-500); font-size: 20px;">✓</span>
+            <span>Ongoing Training & Certification</span>
+          </li>
+          <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 16px;">
+            <span style="color: var(--color-red-500); font-size: 20px;">✓</span>
+            <span>100% Satisfaction Guaranteed</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Image Column -->
+      <div class="animate-on-scroll" style="position: relative;">
+        <div style="position: absolute; top: -16px; right: -16px; width: 100%; height: 100%; background-color: var(--color-blue-900); border-radius: var(--radius-md); z-index: 1;"></div>
+        <img src="/images/joe-cindy.png" alt="Topline Plumbing Technician at Work"
+          style="position: relative; z-index: 2; width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: var(--radius-md);" />
+      </div>
+    </div>
   </section>
 
   <!-- Trust & Stats Section -->
@@ -472,7 +604,7 @@
           Quote &rarr;</a>
         <a href="tel:5307689446"
           style="color: white; font-size: 15px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Or
-          call 📞 530-768-9446</a>
+          call 📞 (530) 768-9446</a>
       </div>
     </div>
   </section>
@@ -483,26 +615,32 @@
 
       <!-- Col 1 -->
       <div>
-        <img src="./images/logo-wide.png" alt="Topline Plumbing"
-          style="width: 160px; margin-bottom: 16px; border-radius:4px; padding:4px;" />
+        <img src="/images/logo.webp" alt="Topline Plumbing"
+          style="width: 200px; margin-bottom: 16px;" />
         <p style="font-size: 16px; color: var(--color-gray-300); margin-bottom: 24px;">Auburn & Grass Valley's most
           trusted plumber since 1998.</p>
-        <div class="social-icons">
+                <div class="social-icons" style="display: flex; gap: 16px; margin-top: 24px;">
           <a href="https://www.facebook.com/profile.php?id=61551944100731"
-            class="social-icon flex items-center justify-center" target="_blank" aria-label="Facebook">
-            <svg style="width: 20px; height: 20px;" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            class="social-icon-pro" target="_blank" aria-label="Facebook"
+            style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px; background: linear-gradient(135deg, #1877F2 0%, #0D5DBF 100%); transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(24,119,242,0.3);">
+            <svg style="width: 22px; height: 22px;" fill="white" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
             </svg>
           </a>
           <a href="https://www.instagram.com/toplinewatersolutions/"
-            class="social-icon flex items-center justify-center" target="_blank" aria-label="Instagram">
-            <svg style="width: 20px; height: 20px;" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            class="social-icon-pro" target="_blank" aria-label="Instagram"
+            style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px; background: linear-gradient(135deg, #E4405F 0%, #C13584 50%, #833AB4 100%); transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(228,64,95,0.3);">
+            <svg style="width: 22px; height: 22px;" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
             </svg>
           </a>
         </div>
+        <style>
+          .social-icon-pro:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+          }
+        </style>
       </div>
 
       <!-- Col 2 -->
@@ -527,7 +665,7 @@
       <div>
         <h4>Contact Us</h4>
         <a href="tel:5307689446" style="font-size: 18px; font-weight: 600; color: var(--color-white);">📞
-          530-768-9446</a>
+          (530) 768-9446</a>
         <a href="mailto:Toplineplumbingredding@gmail.com">Toplineplumbingredding@gmail.com</a>
         <p>Serving Redding & surrounding areas</p>
       </div>
