@@ -193,6 +193,66 @@ p {
   /* 96px desktop vertical */
 }
 
+/* Hero block: center heading, subheading, and buttons on area pages */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem var(--space-4) 4rem;
+  background-size: cover;
+  background-position: center;
+}
+.hero-section .hero-content {
+  display: block;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--space-4);
+}
+.hero-section .hero-content h1 {
+  text-align: center;
+}
+.hero-section .hero-content p {
+  text-align: center;
+}
+.hero-section .hero-btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Hero with form: two columns on desktop, stack on mobile */
+@media (max-width: 900px) {
+  .hero-section .hero-inner {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-section .hero-text {
+    text-align: center !important;
+  }
+  .hero-section .hero-btns {
+    justify-content: center;
+  }
+}
+
+/* Center section titles and intro text on pages */
+.section .container > h1,
+.section .container > h2 {
+  text-align: center;
+}
+.section .container > p {
+  text-align: center;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section .card > h2,
+.section .card > h3 {
+  text-align: center;
+}
+
 .bg-light {
   background-color: var(--color-gray-50);
 }
@@ -387,9 +447,26 @@ p {
   width: 100%;
 }
 
+.navbar .logo {
+  background: transparent !important;
+  flex-shrink: 0;
+  display: inline-block;
+  line-height: 0;
+}
 .nav-logo {
   width: 180px;
-  filter: brightness(0) invert(1);
+  height: auto;
+  min-height: 40px;
+  display: block;
+  background: transparent !important;
+  pointer-events: none;
+}
+.nav-logo svg {
+  width: 100%;
+  height: auto;
+  min-height: 40px;
+  display: block;
+  vertical-align: middle;
 }
 
 .nav-links {
@@ -770,4 +847,36 @@ p {
 .social-icon:hover {
   background-color: var(--color-blue-500);
   transform: none;
+}
+
+/* Fix white text on light backgrounds for service pages */
+.hero-section .hero-content h1,
+.hero-section .hero-content p {
+  color: var(--color-gray-900);
+}
+
+/* Add dark overlay to hero sections with background images */
+.hero-section {
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(14, 17, 26, 0.75);
+  z-index: 1;
+}
+
+.hero-section .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section .hero-content h1,
+.hero-section .hero-content p {
+  color: white;
 }
