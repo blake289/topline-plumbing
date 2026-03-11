@@ -996,3 +996,23 @@ body:has(title:contains("Contact")) .hero-section h1,
     transform: scale(1.1);
   }
 }
+
+
+/* More spacing for navbar right elements */
+.navbar .nav-links {
+  margin-right: auto;
+}
+
+.navbar .status-dot-container {
+  margin-left: 40px;
+}
+
+.navbar .btn-primary {
+  margin-left: 16px;
+}
+
+@media (min-width: 1024px) {
+  .nav-container > div[style*="24/7"] {
+    margin-left: 48px !important;
+  }
+}
