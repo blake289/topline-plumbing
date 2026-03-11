@@ -880,3 +880,97 @@ p {
 .hero-section .hero-content p {
   color: white;
 }
+
+
+/* ======================
+   COMPREHENSIVE CONTRAST FIXES
+   ====================== */
+
+/* Ensure all text on light backgrounds is dark */
+.bg-light,
+.bg-light h1,
+.bg-light h2, 
+.bg-light h3,
+.bg-light h4,
+.bg-light h5,
+.bg-light h6,
+.bg-light p,
+.bg-light li,
+.bg-light span,
+.bg-light div {
+  color: var(--color-gray-900) !important;
+}
+
+/* Override any white text on light sections */
+section.bg-light *:not(.btn):not(.social-icon-pro):not(svg) {
+  color: var(--color-gray-900) !important;
+}
+
+/* Ensure cards have proper contrast */
+.card,
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card p {
+  color: var(--color-gray-900) !important;
+}
+
+/* Fix any white background sections */
+section[style*="background: white"],
+section[style*="background-color: white"],
+section[style*="background: var(--color-white)"] {
+  color: var(--color-gray-900);
+}
+
+section[style*="background: white"] h1,
+section[style*="background: white"] h2,
+section[style*="background: white"] h3,
+section[style*="background: white"] p,
+section[style*="background-color: white"] h1,
+section[style*="background-color: white"] h2,
+section[style*="background-color: white"] h3,
+section[style*="background-color: white"] p {
+  color: var(--color-gray-900) !important;
+}
+
+/* Fix navbar - ensure consistent positioning */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--color-blue-900);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  flex-shrink: 0;
+  min-width: 150px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+
+/* Add more padding above h1 on service/area pages */
+.hero-section h1 {
+  padding-top: 60px;
+}
+
+/* Contact page h1 padding */
+body:has(title:contains("Contact")) .hero-section h1,
+.hero-section .hero-content h1:first-child {
+  padding-top: 60px;
+}
