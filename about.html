@@ -16,30 +16,79 @@
 
 <body>
         <!-- Desktop Nav -->
-    <header class="navbar">
-      <div class="container nav-container">
-        <a href="/" class="logo"><img src="/images/logo.webp" alt="Topline Plumbing" style="height: 60px; width: auto;"></a>
-        <nav class="nav-links">
-          <a href="/index.html#services">Services</a>
-          <a href="/about.html">About</a>
-          <a href="/contact.html">Contact</a>
-          <a href="tel:5307689446" class="btn nav-cta" style="color: white !important;">Book Free Inspection</a>
-        </nav>
-        <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
-      </div>
-    </header>
-
-    <!-- Mobile Drawer & Backdrop -->
-    <div class="backdrop"></div>
-    <div class="mobile-drawer">
-      <button class="drawer-close" aria-label="Close Menu">✕</button>
-      <div style="margin-top: 40px;">
-        <a href="/index.html#services">Services</a>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="/" class="logo"><img src="/images/logo.webp" alt="Topline Plumbing" style="height: 60px; width: auto;"></a>
+      <nav class="nav-links">
+        <div class="dropdown">
+          <a href="/index.html#services">Services ▾</a>
+          <div class="dropdown-content">
+            <a href="/emergency.html">Emergency Plumbing</a>
+            <a href="/water-heater-repair.html">Water Heaters</a>
+            <a href="/drain-cleaning.html">Drain Cleaning</a>
+            <a href="/tankless.html">Tankless Upgrades</a>
+            <a href="/repiping-services.html">Repiping Services</a>
+            <a href="/fixture-installs.html">Fixture Installs</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">Service Areas ▾</a>
+          <div class="dropdown-content">
+            <a href="/shasta-lake.html">Shasta Lake</a>
+            <a href="/anderson.html">Anderson</a>
+            <a href="/palo-cedro.html">Palo Cedro</a>
+            <a href="/bella-vista.html">Bella Vista</a>
+          </div>
+        </div>
         <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-        <a href="tel:5307689446" class="btn nav-cta" style="margin-top: 24px;">Book Free Inspection</a>
-      </div>
+        <a href="/contact.html">Contact Us</a>
+      </nav>
+      <!-- Ref site has a red button on the far right of nav -->
+              <div class="status-dot-container" style="display: flex; align-items: center; gap: 8px; color: white; font-size: 14px; font-weight: 600; margin-left: 48px;">
+          <span class="status-dot"></span>
+          <span>24/7 Emergency Support</span>
+        </div>
+        <a href="tel:5307689446" class="btn btn-primary"
+        style="padding: 12px 24px; border-radius: 30px; display: none; margin-left: 32px;">
+        📞 (530) 768-9446
+      </a>
+      <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
     </div>
+  </header>
+  <style>
+    @media (min-width: 1024px) {
+      .navbar .btn-primary {
+        display: inline-flex !important;
+      }
+    }
+  </style>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="backdrop"></div>
+  <div class="mobile-drawer" style="overflow-y: auto;">
+    <button class="drawer-close" aria-label="Close Menu">✕</button>
+    <div style="margin-top: 40px;">
+      <a href="/index.html#services">Services ▾</a>
+      <div style="padding-left: 1rem; border-left: 2px solid var(--color-gray-100); margin-bottom: 1rem;">
+        <a href="/emergency.html" style="font-size: 16px; padding: 12px 0;">Emergency Plumbing</a>
+        <a href="/water-heater-repair.html" style="font-size: 16px; padding: 12px 0;">Water Heaters</a>
+        <a href="/drain-cleaning.html" style="font-size: 16px; padding: 12px 0;">Drain Cleaning</a>
+        <a href="/tankless.html" style="font-size: 16px; padding: 12px 0;">Tankless Upgrades</a>
+        <a href="/repiping-services.html" style="font-size: 16px; padding: 12px 0;">Repiping Services</a>
+        <a href="/fixture-installs.html" style="font-size: 16px; padding: 12px 0;">Fixture Installs</a>
+      </div>
+      <a href="#">Service Areas ▾</a>
+      <div style="padding-left: 1rem; border-left: 2px solid var(--color-gray-100); margin-bottom: 1rem;">
+        <a href="/shasta-lake.html" style="font-size: 16px; padding: 12px 0;">Shasta Lake</a>
+        <a href="/anderson.html" style="font-size: 16px; padding: 12px 0;">Anderson</a>
+        <a href="/palo-cedro.html" style="font-size: 16px; padding: 12px 0;">Palo Cedro</a>
+        <a href="/bella-vista.html" style="font-size: 16px; padding: 12px 0;">Bella Vista</a>
+      </div>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact Us</a>
+      <a href="tel:5307689446" class="btn btn-primary" style="margin-top: 24px; width: 100%;">📞 (530) 768-9446</a>
+    </div>
+  </div>
 
     <section class="section container">
         <h1 class="text-center" style="margin-bottom: 2rem;">You're Not Calling a Corporation — You're Calling Neighbors
